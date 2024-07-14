@@ -97,19 +97,6 @@
                                 <setting-list-item type="textarea" title='{{ i18n "pages.setting.xrayConfigTemplate"}}' desc='{{ i18n "pages.setting.xrayConfigTemplateDesc"}}' v-model="allSetting.xrayTemplateConfig"></setting-list-item>
                             </a-list>
                         </a-tab-pane>
-                        <a-tab-pane key="4" tab='{{ i18n "pages.setting.TGReminder"}}'>
-                            <a-list item-layout="horizontal" style="background: white">
-                                <setting-list-item type="switch" title='{{ i18n "pages.setting.telegramBotEnable" }}' desc='{{ i18n "pages.setting.telegramBotEnableDesc" }}'  v-model="allSetting.tgBotEnable"></setting-list-item>
-                                <setting-list-item type="text" title='{{ i18n "pages.setting.telegramToken"}}' desc='{{ i18n "pages.setting.telegramTokenDesc"}}'  v-model="allSetting.tgBotToken"></setting-list-item>
-                                <setting-list-item type="number" title='{{ i18n "pages.setting.telegramChatId"}}' desc='{{ i18n "pages.setting.telegramChatIdDesc"}}'  v-model.number="allSetting.tgBotChatId"></setting-list-item>
-                                <setting-list-item type="text" title='{{ i18n "pages.setting.telegramNotifyTime"}}' desc='{{ i18n "pages.setting.telegramNotifyTimeDesc"}}'  v-model="allSetting.tgRunTime"></setting-list-item>
-                            </a-list>
-                        </a-tab-pane>
-                        <a-tab-pane key="5" tab='{{ i18n "pages.setting.otherSetting"}}'>
-                            <a-list item-layout="horizontal" style="background: white">
-                                <setting-list-item type="text" title='{{ i18n "pages.setting.timeZonee"}}' desc='{{ i18n "pages.setting.timeZoneDesc"}}' v-model="allSetting.timeLocation"></setting-list-item>
-                            </a-list>
-                        </a-tab-pane>
                     </a-tabs>
                 </a-space>
             </a-spin>

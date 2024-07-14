@@ -47,7 +47,7 @@
 "inbounds" = "Inbounds"
 "setting" = "Panel Setting"
 "logout" = "LogOut"
-"link" = "Other"
+"link" = "follow me"
 
 [pages.login]
 "title" = "Login"
