@@ -167,7 +167,7 @@ reset_config() {
         return 0
     fi
     /usr/local/x-ui/x-ui setting -reset
-    echo -e "All panel settings have been reset to default，Please restart the panel now，and use the default ${green}54321${plain} Port to Access the web Panel"
+    echo -e "All panel settings have been reset to default，Please restart the panel now，and use the default ${green}2087${plain} Port to Access the web Panel"
     confirm_restart
 }
 

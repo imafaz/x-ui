@@ -2,7 +2,6 @@ package controller
 
 import (
 	"net/http"
-	"time"
 	"x-ui/logger"
 	"x-ui/web/service"
 	"x-ui/web/session"
@@ -57,7 +56,6 @@ func (a *IndexController) login(c *gin.Context) {
 		return
 	}
 	user := a.userService.CheckUser(form.Username, form.Password)
-	timeStr := time.Now().Format("2006-01-02 15:04:05")
 	if user == nil {
 		logger.Infof("wrong username or password: \"%s\" \"%s\"", form.Username, form.Password)
 		pureJsonMsg(c, false, I18n(c, "pages.login.toasts.wrongUsernameOrPassword"))
