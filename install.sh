@@ -35,8 +35,6 @@ if [[ $arch == "x86_64" || $arch == "x64" || $arch == "amd64" ]]; then
     arch="amd64"
 elif [[ $arch == "aarch64" || $arch == "arm64" ]]; then
     arch="arm64"
-elif [[ $arch == "s390x" ]]; then
-    arch="s390x"
 else
     arch="amd64"
     echo -e "${red} Fail to check system arch,will use default arch here: ${arch}${plain}"
@@ -80,8 +78,6 @@ install_base() {
         apt install wget curl tar -y
     fi
 }
-
-#This function will be called when user installed x-ui out of sercurity
 config_after_install() {
     echo -e "${yellow} Install/update finished need to modify panel settings out of security ${plain}"
     read -p "are you continue,if you type n will skip this at this time[y/n]": config_confirm
@@ -142,12 +138,6 @@ install_x-ui() {
     chmod +x /usr/local/x-ui/x-ui.sh
     chmod +x /usr/bin/x-ui
     config_after_install
-    #echo -e "如果是全新安装，默认网页端口为 ${green}2087${plain}，用户名和密码默认都是 ${green}admin${plain}"
-    #echo -e "请自行确保此端口没有被其他程序占用，${yellow}并且确保 2087 端口已放行${plain}"
-    #    echo -e "若想将 2087 修改为其它端口，输入 x-ui 命令进行修改，同样也要确保你修改的端口也是放行的"
-    #echo -e ""
-    #echo -e "如果是更新面板，则按你之前的方式访问面板"
-    #echo -e ""
     systemctl daemon-reload
     systemctl enable x-ui
     systemctl start x-ui
@@ -168,6 +158,11 @@ install_x-ui() {
     echo -e "x-ui install      - Install   x-ui"
     echo -e "x-ui uninstall    - Uninstall x-ui"
     echo -e "----------------------------------------------"
+    server_ip=$(hostname -I | cut -d' ' -f1)
+    echo "login url: http://$server_ip:$config_port/staff"
+    echo "username: $config_account"
+    echi "password: $config_password"
+
 }
 
 echo -e "${green}excuting...${plain}"
