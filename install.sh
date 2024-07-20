@@ -161,7 +161,7 @@ install_x-ui() {
     server_ip=$(hostname -I | cut -d' ' -f1)
     echo "login url: http://$server_ip:$config_port/staff"
     echo "username: $config_account"
-    echi "password: $config_password"
+    echo "password: $config_password"
 
 }
 
