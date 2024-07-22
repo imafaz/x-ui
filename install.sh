@@ -58,16 +58,16 @@ if [[ -z "$os_version" && -f /etc/lsb-release ]]; then
 fi
 
 if [[ x"${release}" == x"centos" ]]; then
-    if [[ ${os_version} -le 6 ]]; then
-        echo -e "${red} please use CentOS 7 or higher version ${plain}\n" && exit 1
+    if [[ ${os_version} -le 8 ]]; then
+        echo -e "${red} please use CentOS 9|almalinux 9 or higher version ${plain}\n" && exit 1
     fi
 elif [[ x"${release}" == x"ubuntu" ]]; then
-    if [[ ${os_version} -lt 16 ]]; then
-        echo -e "${red} please use Ubuntu 16 or higher version ${plain}\n" && exit 1
+    if [[ ${os_version} -lt 20 ]]; then
+        echo -e "${red} please use Ubuntu 22 or higher version ${plain}\n" && exit 1
     fi
 elif [[ x"${release}" == x"debian" ]]; then
-    if [[ ${os_version} -lt 8 ]]; then
-        echo -e "${red} please use Debian 8 or higher version ${plain}\n" && exit 1
+    if [[ ${os_version} -lt 11 ]]; then
+        echo -e "${red} please use Debian 12 or higher version ${plain}\n" && exit 1
     fi
 fi
 
