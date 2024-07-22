@@ -66,7 +66,7 @@ elif [[ x"${release}" == x"ubuntu" ]]; then
         echo -e "${red} please use Ubuntu 22 or higher version ${plain}\n" && exit 1
     fi
 elif [[ x"${release}" == x"debian" ]]; then
-    if [[ ${os_version} -lt 11 ]]; then
+    if [[ ${os_version} -lt 12 ]]; then
         echo -e "${red} please use Debian 12 or higher version ${plain}\n" && exit 1
     fi
 fi
