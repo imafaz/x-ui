@@ -18,17 +18,15 @@
 
 # Os support
 - Ubuntu 22 or higher version
-- Centos|almalinux 9 or higher version
+- Centos|Almalinux 9 or higher version
 - Debian 12 or higher version
 
-
-# Install & Upgrade
-
+# Basic install/upgrade
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/imafaz/x-ui/master/install.sh)
 ```
 
-## Manual install & upgrade
+## Manual install/upgrade
 
 1. First download the latest compressed package from https://github.com/imafaz/x-ui/releases , generally choose Architecture `amd64`
 2. Then upload the compressed package to the server's `/root/` directory and `root` rootlog in to the server with user
@@ -47,10 +45,3 @@ systemctl daemon-reload
 systemctl enable x-ui
 systemctl restart x-ui
 ```
-
-
-## suggestion system
-
-- CentOS 7+
-- Ubuntu 16+
-- Debian 8+
