@@ -16,6 +16,11 @@
 - Support one-click SSL certificate application and automatic renewal
 - For more advanced configuration items, please refer to the panel
 
+# Os support
+- Ubuntu 22 or higher version
+- Centos|almalinux 9 or higher version
+- Debian 12 or higher version
+
 
 # Install & Upgrade
 

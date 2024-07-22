@@ -58,11 +58,11 @@ if [[ -z "$os_version" && -f /etc/lsb-release ]]; then
 fi
 
 if [[ x"${release}" == x"centos" ]]; then
-    if [[ ${os_version} -le 8 ]]; then
+    if [[ ${os_version} -le 9 ]]; then
         echo -e "${red} please use CentOS 9|almalinux 9 or higher version ${plain}\n" && exit 1
     fi
 elif [[ x"${release}" == x"ubuntu" ]]; then
-    if [[ ${os_version} -lt 20 ]]; then
+    if [[ ${os_version} -lt 22 ]]; then
         echo -e "${red} please use Ubuntu 22 or higher version ${plain}\n" && exit 1
     fi
 elif [[ x"${release}" == x"debian" ]]; then
@@ -75,6 +75,7 @@ install_base() {
     if [[ x"${release}" == x"centos" ]]; then
         yum install wget curl tar -y
     else
+        apt update
         apt install wget curl tar -y
     fi
 }
